@@ -1,0 +1,2 @@
+# This file prevents GitHub's Jekyll engine from processing the 'out' directory
+# which is necessary for folders starting with underscores (like _next) to be served correctly.

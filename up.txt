@@ -1,0 +1,17 @@
+Replaced in 16 files with these new local image names:
+
+hero-ocean.png - Ocean/wave imagery (used in contact, programs pages)
+rocket-hero.png - Rocket hero image (programs/rocket)
+rocket-launch.png - Rocket launch (programs/rocket, news pages)
+satellite-earth.png - Satellite/earth views (programs/cubesat, missions/cansat)
+space-earth.png - Space/earth perspective (cubesat section)
+team-work.png - Team collaboration (programs/cansat, missions/avionics, rovers)
+network-comms.png - Network/communication (cansat section)
+galaxy-space.png - Galaxy/space (join, missions pages)
+tech-setup.png - Technology/laptop setup (contact page)
+graduation-people.png - Graduation/celebration (university grant article)
+meeting-people.png - People/meeting (recruitment article)
+globe-planet.png - Globe/planet view (inaugural symposium article)
+rover-chassis.png - Rover/robot hardware (new rover article)
+cansat-competition-2026/page.tsx - Now uses /media/images/cansat-prototype.png
+avionics-pcb-v3/page.tsx - Now uses /media/images/pcb-electronics.png
