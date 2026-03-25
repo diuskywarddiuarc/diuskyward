@@ -14,6 +14,9 @@ import SecurityShield from "@/components/SecurityShield";
 import LoadingScreen from "@/components/LoadingScreen";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://diuskyward.vercel.app"
+  ),
   title: "DIU Skyward | Flagship Program | Rocket and Satellite Research Initiative",
   description: "DIU Skyward is a student-led aerospace engineering initiative focused on rockets, satellites and robotics.",
   openGraph: {

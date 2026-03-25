@@ -5,7 +5,7 @@ import type { NextRequest } from 'next/server';
 const BLOCKED_PATTERNS = [
   'wp-admin', 'wp-login', '.php', '.env', '.git', 'xmlrpc', 'cgi-bin', 'config.js',
   'payload.js', 'eval(', '<script', 'select * from', '-- ', '; drop', 'autodiscover',
-  'well-known', 'etc/passwd', '../', '..\\', 'javascript:'
+  'etc/passwd', '../', '..\\', 'javascript:'
 ];
 
 const BLOCKED_USER_AGENTS = [

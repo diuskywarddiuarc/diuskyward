@@ -1,15 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* static export for github pages */
-  output: 'export',
+  /* config options here - all assets localized to /public */
   images: {
-    unoptimized: true, // Static export doesn't support Next.js image optimization API
+    remotePatterns: [],
   },
-  trailingSlash: true, // Recommended for static hosting
-  /*
-  // NOTE: headers() is not supported by 'output: export'. 
-  // Security headers must be handled by the CDN (e.g. Cloudflare) for GitHub Pages.
   async headers() {
     return [
       {
@@ -19,12 +14,34 @@ const nextConfig: NextConfig = {
             key: 'X-Frame-Options',
             value: 'DENY',
           },
-          ...
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://cdn-icons-png.flaticon.com https://i.ytimg.com; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://www.youtube.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co;",
+          },
         ],
       },
     ];
   },
-  */
 };
 
 export default nextConfig;
